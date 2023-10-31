@@ -119,3 +119,27 @@ $.getScript("https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles
   );
 
 });
+
+// JavaScript to handle truncation and "Read more" functionality
+const textElement = document.querySelector('.truncate-text');
+const readMoreButton = document.querySelector('#read-more-button');
+
+if (textElement) {
+  if (textElement.scrollHeight > textElement.clientHeight) {
+    readMoreButton.style.display = 'block';
+
+    readMoreButton.addEventListener('click', function () {
+      if (textElement.style.whiteSpace === 'nowrap') {
+        textElement.style.whiteSpace = 'normal';
+        textElement.style.overflow = 'initial';
+        textElement.style.textOverflow = 'unset';
+        readMoreButton.textContent = 'Read less';
+      } else {
+        textElement.style.whiteSpace = 'nowrap';
+        textElement.style.overflow = 'hidden';
+        textElement.style.textOverflow = 'ellipsis';
+        readMoreButton.textContent = 'Read more';
+      }
+    });
+  }
+}
