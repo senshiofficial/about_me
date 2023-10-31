@@ -120,7 +120,7 @@ $.getScript("https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles
 
 });
 
-// JavaScript to handle truncation and "Read more" functionality
+// JavaScript to handle truncation and "Read more" functionalitb
 const textElement = document.querySelector('.truncate-text');
 const readMoreButton = document.querySelector('#read-more-button');
 
